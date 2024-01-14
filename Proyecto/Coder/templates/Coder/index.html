@@ -1,0 +1,8 @@
+{% extends 'Coder/base.html' %}
+
+{% block contenido %}
+
+    <h1>Bienvenido a FutWeb</h1>
+    <button><a href="{% url 'equipo_list' %}">Ver equipos</a></button>
+    <button><a href="{% url 'equipo_form' %}">Registrar equipos</a></button>
+{% endblock contenido %}
