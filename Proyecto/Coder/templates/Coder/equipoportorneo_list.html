@@ -1,0 +1,14 @@
+{% extends 'Coder/base.html' %}
+
+{% block contenido %}
+
+    {% for equipoportorneo in EquipoPorTorneo %}
+     <ul>
+        <li>
+            {{equipoportorneo.nombre}} 
+            {{equipoportorneo.division}}
+        </li>
+     </ul>
+    {% endfor %}<button><a href="{% url 'index' %}">Volver al inicio</a></button>
+    
+{% endblock contenido %}

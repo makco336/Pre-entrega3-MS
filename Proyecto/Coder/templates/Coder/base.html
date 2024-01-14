@@ -11,7 +11,7 @@
             {% endblock titulo %}
         </title>
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="{% static 'Coder/assets/favicon.icon'%}" />
+        <link rel="icon" type="image/x-icon" href="{% static 'Coder/assets/favicon.ico'%}" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{% static 'Coder/css/styles.css' %}" rel="stylesheet" />
     </head>
@@ -39,11 +39,15 @@
                 <div class="col-lg-7"> {% block contenido %} {% endblock contenido %} </div>
                 <div class="col-lg-5">
                     <h1 class="font-weight-light">FutWeb</h1>
-                    <p>Esta es una web para aquellos amantes del futbol que quieran armar torneos con distintas categorias y equipos</p>
-                    <a class="btn btn-primary" href="#!">Call to Action!</a>
+                    <p>Esta es una web para aquellos amantes del futbol que quieran armar torneos con distintas categorias y equipos. Una vez registrado los jugadores, equipos y torneos, podras ubicar cada jugador con su equipo y cada equipo en un torneo en los botones a continuacion:</p>
+                    <a class="btn btn-primary" href="{% url 'equipoportorneo_form' %}">Equipo en torneo</a>   <a class="btn btn-primary" href="{% url 'jugadorporequipo_form' %}">Jugador en el equipo</a>
                 </div>
             </div>
             
+
+
+
+
             <!-- Call to Action-->
             <div class="card text-white bg-secondary my-5 py-4 text-center">
                 <div class="card-body"><p class="text-white m-0">En la parte inferior de la pantalla podras registrar tu equipo, jugador o torneo.</p></div>
@@ -53,7 +57,7 @@
                 <div class="col-md-4 mb-5">
                     <div class="card h-100">
                         <div class="card-body">
-                            <h2 class="card-title">Registrar jugador</h2>
+                            <h2 class="card-title">Registrar Jugador</h2>
                             <p class="card-text">En esta seccion podras registrar jugadores donde tendras que poner su nombre, apellido, club y numero de camiseta.</p>
                         </div>
                         <div class="card-footer"><a class="btn btn-primary btn-sm" href="{% url 'jugador_form' %}">Registrar</a></div>
@@ -62,7 +66,7 @@
                 <div class="col-md-4 mb-5">
                     <div class="card h-100">
                         <div class="card-body">
-                            <h2 class="card-title">Registrar equipo</h2>
+                            <h2 class="card-title">Registrar Equipo</h2>
                             <p class="card-text">En esta seccion podras registrar tu equipo donde tendras que poner su nombre, cantidad de jugadores y division a la que pertenece.</p>
                         </div>
                         <div class="card-footer"><a class="btn btn-primary btn-sm" href="{% url 'equipo_form' %}">Registrar</a></div>

@@ -26,8 +26,15 @@ class Torneo(models.Model):
 
 
 class JugadorPorEquipo(models.Model):
-    equipo = models.ForeignKey(Equipo, on_delete=models.CASCADE)
-    jugador = models.ForeignKey(Jugador, on_delete=models.CASCADE)
+    nombre = models.ForeignKey(Equipo, on_delete=models.CASCADE)
+    apellido = models.ForeignKey(Jugador, on_delete=models.CASCADE)
 
     def __str__(self) :
-        return f'{self.equipo} {self.jugador}'
+        return f'{self.nombre} {self.apellido}'
+
+class EquipoPorTorneo(models.Model):
+    nombre = models.ForeignKey(Equipo, on_delete=models.CASCADE)
+    division = models.ForeignKey(Torneo, on_delete=models.CASCADE)
+
+    def __str__(self) :
+        return f'{self.nombre} {self.division}'

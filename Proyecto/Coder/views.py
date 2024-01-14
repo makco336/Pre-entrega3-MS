@@ -49,3 +49,35 @@ def torneo_form(request):
     else:
         form = forms.torneoform()
     return render(request, "Coder/torneo_form.html", {"form": form})
+
+
+def equipoportorneo_form(request):
+    if request.method =="POST":
+        form = forms.equipoportorneoform(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("equipoportorneo_list")
+    else:
+        form = forms.equipoportorneoform()
+    return render(request, "Coder/equipoportorneo_form.html", {"form": form})
+
+def jugadorporequipo_form(request):
+    if request.method =="POST":
+        form = forms.jugadorporequipoform(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("jugadorporequipo_list")
+    else:
+        form = forms.jugadorporequipoform()
+    return render(request, "Coder/jugadorporequipo_form.html", {"form": form})
+
+def equipoportorneo_list(request):
+    consulta =  models.EquipoPorTorneo.objects.all()
+    contexto = {"EquipoPorTorneo": consulta}
+    return render(request, "Coder/equipoportorneo_list.html", contexto)
+
+def jugadorporequipo_list(request):
+    consulta =  models.JugadorPorEquipo.objects.all()
+    contexto = {"JugadorPorEquipo": consulta}
+    return render(request, "Coder/jugadorporequipo_list.html", contexto)
+

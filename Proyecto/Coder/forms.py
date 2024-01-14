@@ -15,3 +15,13 @@ class torneoform(forms.ModelForm):
     class Meta:
         model = models.Torneo
         fields = "__all__"
+
+class equipoportorneoform(forms.ModelForm):
+    class Meta:
+        model = models.EquipoPorTorneo
+        fields = "__all__"
+
+class jugadorporequipoform(forms.ModelForm):
+    class Meta:
+        model = models.JugadorPorEquipo
+        fields = "__all__"

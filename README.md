@@ -1,6 +1,6 @@
 # Preentrega 3 Comisión 56065 
 
-# Marcos Segura
+## Marcos Segura
 
 - LinkedIn: https://www.linkedin.com/in/marcos-segura-69048b245/
 
@@ -14,6 +14,6 @@
 
 ## Pasos para ejecutar el proyecto
 
-- En su terminal: git clone 
+- En su terminal: git clone https://github.com/makco336/Pre-entrega3-MS.git
 
 - 
