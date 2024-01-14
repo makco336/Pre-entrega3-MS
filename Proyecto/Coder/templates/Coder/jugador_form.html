@@ -1,0 +1,14 @@
+{% extends 'Coder/base.html' %}
+
+{% block formulario %}   
+{% endblock formulario %} 
+
+{% block contenido %}
+    
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">Guardar</button>
+    </form>
+
+{% endblock contenido %}

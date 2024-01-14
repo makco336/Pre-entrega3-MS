@@ -1,0 +1,15 @@
+{% extends 'Coder/base.html' %}
+
+{% block contenido %}
+
+    {% for jugador in Jugador %}
+     <ul>
+        <li>
+            {{jugador.nombre}} 
+            {{jugador.apellido}}
+            {{jugador.equipo}}
+        </li>
+     </ul>
+    {% endfor %}<button><a href="{% url 'index' %}">Volver al inicio</a></button>
+    
+{% endblock contenido %}

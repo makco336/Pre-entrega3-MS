@@ -1,8 +1,18 @@
 {% extends 'Coder/base.html' %}
 
+{% block subtitulo %}
+        <h1>Bienvenido a FutWeb</h1>
+{% endblock subtitulo %}
+
 {% block contenido %}
 
-    <h1>Bienvenido a FutWeb</h1>
+{% endblock contenido %}
+
+{% block content %}
     <button><a href="{% url 'equipo_list' %}">Ver equipos</a></button>
     <button><a href="{% url 'equipo_form' %}">Registrar equipos</a></button>
-{% endblock contenido %}
+    <button><a href="{% url 'jugador_list' %}">Ver Jugadores</a></button>
+    <button><a href="{% url 'jugador_form' %}">Registrar jugador</a></button>
+    <button><a href="{% url 'torneo_list' %}">Ver torneos</a></button>
+    <button><a href="{% url 'torneo_form' %}">Registrar torneo</a></button>
+{% endblock content %}
