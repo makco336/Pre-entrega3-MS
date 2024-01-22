@@ -8,16 +8,20 @@
 
 ## Resumen del proyecto
 
-- Creamos una pagina donde se pueden cargar datos de: 
+### Creamos una pagina donde se pueden cargar datos de: 
  - Equipos
  - Jugadores
  - Torneos
-- Ademas de estas 3 clases se puede ver una lista de los datos ingresados
+### Ademas de estas 3 clases se puede ver una lista de los datos ingresados
  - Este proyecto se hizo con Django 5.0.1
 
 
 ## Pasos para ejecutar el proyecto
 
-- En su terminal: git clone https://github.com/makco336/Pre-entrega3-MS.git
+- Crear una carpeta para guardar dentro el proyecto
+
+- En su carpeta abrir la terminal: git clone https://github.com/makco336/Pre-entrega3-MS.git
 
 - Una vez abierta la Preentrega3 entrar al proyecto y correr con python manage.py runserver
+
+- SuperUser: admin (contraseña:123)
